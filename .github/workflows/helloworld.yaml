@@ -11,6 +11,8 @@ jobs:
     container: hashicorp/terraform:1.0.3
     steps:
       - uses: actions/checkout@v2
+        with:
+	        token: ${{ secrets.MY_GITHUB_TOKEN }}
       - run: |
           uname -a
           cd files
