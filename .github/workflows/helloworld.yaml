@@ -1,9 +1,9 @@
 name: helloworld
 on:
   push:
-    branches: [ main ]
+    branches: [ on_necci ]
   pull_request:
-    branches: [ main ]
+    branches: [ on_necci ]
   workflow_dispatch:
 jobs:
   helloworld:
