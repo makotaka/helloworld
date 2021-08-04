@@ -10,6 +10,9 @@ jobs:
     runs-on: [self-hosted, necci]
     container: hashicorp/terraform:1.0.3
     steps:
+      - run: |
+          ping 8.8.8.8
+          ping github.com
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
