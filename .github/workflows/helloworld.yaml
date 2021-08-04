@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: [self-hosted, necci]
+    runs-on: [self-hosted, necci2]
     container: hashicorp/terraform:1.0.3
     steps:
       - run: |
