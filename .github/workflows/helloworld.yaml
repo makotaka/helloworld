@@ -1,17 +1,19 @@
 name: helloworld
 on:
   push:
-    branches: [ on_container ]
+    branches: [ checkout ]
   pull_request:
-    branches: [ on_container ]
+    branches: [ checkout ]
   workflow_dispatch:
 jobs:
   helloworld:
     runs-on: [self-hosted, necci]
     container: hashicorp/terraform:1.0.3
     steps:
+      - uses: actions/checkout@v2
       - run: |
           uname -a
-          echo Hello, world!
-          terraform version
+          cd files
+          cat text.txt
+          
 
