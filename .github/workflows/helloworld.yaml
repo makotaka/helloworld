@@ -9,5 +9,7 @@ jobs:
   helloworld:
     runs-on: ubuntu-18.04
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - run: |
+          uname -a
+          echo Hello, world!
+
