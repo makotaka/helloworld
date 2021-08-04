@@ -1,15 +1,17 @@
 name: helloworld
 on:
   push:
-    branches: [ on_necci ]
+    branches: [ on_container ]
   pull_request:
-    branches: [ on_necci ]
+    branches: [ on_container ]
   workflow_dispatch:
 jobs:
   helloworld:
     runs-on: [self-hosted, necci]
+    container: hashicorp/terraform:1.0.3
     steps:
       - run: |
           uname -a
           echo Hello, world!
+          terraform version
 
