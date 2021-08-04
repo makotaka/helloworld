@@ -7,9 +7,16 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: [self-hosted, necci]
+    runs-on: [self-hosted, necci2]
     steps:
       - run: |
           uname -a
           echo Hello, world!
+  githubhosted:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: |
+          uname -a
+          echo Hello, world!
+    
 
