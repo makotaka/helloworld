@@ -11,8 +11,8 @@ jobs:
     container: hashicorp/terraform:1.0.3
     steps:
       - run: |
-          ping 8.8.8.8
-          ping github.com
+          ping 8.8.8.8 -c 2
+          ping github.com -c 2
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
