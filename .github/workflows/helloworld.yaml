@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: ubuntu-18.04
+    runs-on: [self-hosted, necci]
     steps:
       - run: |
           uname -a
