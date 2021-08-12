@@ -10,13 +10,7 @@ jobs:
     runs-on: [self-hosted, necci2]
     container: hashicorp/terraform:1.0.3
     steps:
-      - run: |
-          ip addr
-          ping 8.8.8.8 -c 2
-          ping github.com -c 2
       - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
       - run: |
           uname -a
           cd files
