@@ -13,6 +13,6 @@ jobs:
       - run: |
           uname -a
           echo Hello, world!
-          hashicorp/terraform:latest
+          terraform version
 
 
