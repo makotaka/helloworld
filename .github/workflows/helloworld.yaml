@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: [self-hosted, necci2]
-    container: hashicorp/terraform:1.0.3
+    runs-on: ubuntu-22.04 # 他にWindowsやMacOSが選べる
+    container: hashicorp/terraform:1.0.3 # dockerhub等から任意のコンテナイメージを選べる
     steps:
       - uses: actions/checkout@v2
       - run: |
