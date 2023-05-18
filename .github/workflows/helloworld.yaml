@@ -12,5 +12,5 @@ jobs:
       - run: |
           uname -a
           echo Hello, world!
-          teraform version
+
 
