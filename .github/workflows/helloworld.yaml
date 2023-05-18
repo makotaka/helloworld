@@ -1,17 +1,18 @@
 name: helloworld
 on:
   push:
-    branches: [ on_container ]
+    branches: [ main ]
   pull_request:
-    branches: [ on_container ]
+    branches: [ main ]
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: [self-hosted, necci]
-    container: hashicorp/terraform:1.0.3
+    runs-on: ubuntu-22.04 # 他にWindowsやMacOSが選べる
+    container: hashicorp/terraform:1.0.3 # dockerhub等から任意のコンテナイメージを選べる
     steps:
       - run: |
           uname -a
           echo Hello, world!
-          terraform version
+          hashicorp/terraform:latest
+
 
