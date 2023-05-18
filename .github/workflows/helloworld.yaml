@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: f1vossut001
+    runs-on: inzai-test
     #container: hashicorp/terraform:1.0.3 # dockerhub等から任意のコンテナイメージを選べる
     steps:
       - run: |
