@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   helloworld:
-    runs-on: ubuntu-22.04 # 他にWindowsやMacOSが選べる
+    runs-on: ubuntu-22.04 # 他にWindowsやMacOSが選べるあああ
     steps:
       - run: |
           uname -a
